@@ -17,7 +17,7 @@ const formResponsesController = {
     let filteredResponses = response.data.responses.filter(response => {
       return parsedFilters.every(filter => {
         const question = response.questions.find(q => q.id === filter.id);
-        if (!question) return false;
+       if (!question || filter.value === undefined || filter.value === null) return false;
 
         switch (filter.condition) {
           case 'equals':
