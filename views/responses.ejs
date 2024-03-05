@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Responses</title>
+</head>
+<body>
+  <h1>Form Responses</h1>
+  <% if (responses.length > 0) { %>
+    <% responses.forEach(function(response) { %>
+      <div class="response">
+        <h2>Submission ID: <%= response.submissionId %></h2>
+        <% response.questions.forEach(function(question) { %>
+          <p><strong><%= question.name %>:</strong> <%= question.value %></p>
+        <% }); %>
+      </div>
+     
+    <% }); %>
+  <% } else { %>
+    <p>No responses found.</p>
+  <% } %>
+   <p>Total Responses: <%= totalResponses %></p>
+    <p>Page Count: <%= pageCount %></p>
+    <p>Pagination not implemented %></p>
+</body>
+</html>

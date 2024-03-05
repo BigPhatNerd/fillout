@@ -43,9 +43,8 @@ const formResponsesController = {
             return false;
         }
       });
-    });
+    }) || [];
 
-    
     const modifiedResponse = {
       ...response.data,
       responses: filteredResponses,
@@ -54,7 +53,7 @@ const formResponsesController = {
       pageCount: Math.ceil(filteredResponses.length / pageSize)
     };
 
-    res.json(modifiedResponse);
+    res.render('responses', modifiedResponse)
   } catch (error) {
     console.error(error);
     res.status(500).send('Error fetching form responses');
