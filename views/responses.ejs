@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Form Responses</title>
+  <title>Form Response</title>
   <style>
-    body, html {
+    .none-found {
       height: 100%;
       margin: 0;
       display: flex;
@@ -19,7 +19,7 @@
   </style>
 </head>
 <body>
-  <h1>Form Responses</h1>
+  <h1><%= responses.length > 0 ? 'Form Responses' : '' %></h1>
   <% if (responses.length > 0) { %>
     <% responses.forEach(function(response) { %>
       <div class="response">
@@ -33,7 +33,7 @@
     <p>Pagination not implemented %></p>
     <% }); %>
   <% } else { %>
-    <h1>🤷‍♂️ No responses found. 🤷‍♂️</h1>
+    <h1 class="none-found">🤷‍♂️ No responses found. 🤷‍♂️</h1>
   <% } %>
    
 </body>
