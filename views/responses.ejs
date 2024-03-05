@@ -19,8 +19,8 @@
   </style>
 </head>
 <body>
-  <h1><%= responses.length > 0 ? 'Form Responses' : '' %></h1>
   <% if (responses.length > 0) { %>
+    <h1>Form Responses</h1>
     <% responses.forEach(function(response) { %>
       <div class="response">
         <h2>Submission ID: <%= response.submissionId %></h2>
@@ -28,13 +28,14 @@
           <p><strong><%= question.name %>:</strong> <%= question.value %></p>
         <% }); %>
       </div>
-     <p>Total Responses: <%= totalResponses %></p>
-    <p>Page Count: <%= pageCount %></p>
-    <p>Pagination not implemented %></p>
-    <% }); %>
+    <% }); %> <!-- Close the forEach loop here -->
+    <p>Total Responses: <%= totalResponses %></p>
+    <% if (typeof pageCount === 'number') { %>
+      <p>Page Count: <%= pageCount %></p>
+    <% } %>
+    <p>Pagination not implemented</p> <!-- This now appears only once, as intended -->
   <% } else { %>
     <h1 class="none-found">🤷‍♂️ No responses found. 🤷‍♂️</h1>
   <% } %>
-   
 </body>
 </html>

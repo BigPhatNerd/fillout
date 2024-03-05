@@ -49,7 +49,7 @@ const formResponsesController = {
       responses: filteredResponses,
       totalResponses: filteredResponses.length,
       
-      pageCount: Math.ceil(filteredResponses.length / pageSize)
+      pageCount: (pageSize && Math.ceil(filteredResponses.length / pageSize) || 0)
     };
 
     res.render('responses', modifiedResponse)
