@@ -13,13 +13,13 @@
           <p><strong><%= question.name %>:</strong> <%= question.value %></p>
         <% }); %>
       </div>
-     
-    <% }); %>
-  <% } else { %>
-    <p>No responses found.</p>
-  <% } %>
-   <p>Total Responses: <%= totalResponses %></p>
+     <p>Total Responses: <%= totalResponses %></p>
     <p>Page Count: <%= pageCount %></p>
     <p>Pagination not implemented %></p>
+    <% }); %>
+  <% } else { %>
+    <p>🤷‍♂️ No responses found. 🤷‍♂️</p>
+  <% } %>
+   
 </body>
 </html>
