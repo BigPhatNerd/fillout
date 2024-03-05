@@ -93,7 +93,7 @@ pageSize: 5
 
 [Multiple Conditions](https://fillout-8r47.onrender.com/cLZojxk94ous/filteredResponses?filters=%5B%20%20%7B%20%20%20%20%22id%22%3A%20%22bE2Bo4cGUv49cjnqZ4UnkW%22,%20%20%20%20%22condition%22%3A%20%22equals%22,%20%20%20%20%22value%22%3A%20%22Johnny%22%20%20%7D,%20%20%7B%20%20%20%20%22id%22%3A%20%22fFnyxwWa3KV6nBdfBDCHEA%22,%20%20%20%20%22condition%22%3A%20%22greater_than%22,%20%20%20%20%22value%22%3A%205%20%20%7D%5D)
 
-filters: [{"id": "bE2Bo4cGUv49cjnqZ4UnkW","condition": "equals","value": "Johnny"}, { "id": "fFnyxwWa3KV6nBdfBDCHEA", "condition": "greater_than", "value": 5}]
+filters: [{ "id": "bE2Bo4cGUv49cjnqZ4UnkW", "condition": "equals", "value": "Johnny"  },{    "id": "fFnyxwWa3KV6nBdfBDCHEA", "condition": "greater_than","value": 1  }]
 
 
 
