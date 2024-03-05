@@ -12,7 +12,6 @@ const formResponsesController = {
       headers: { 'Authorization': `Bearer ${process.env.FILLOUT_API_KEY}` },
       params: { page, pageSize } 
     });
-    console.log({page, pageSize})
 
     let filteredResponses = response.data.responses.filter(response => {
       return parsedFilters.every(filter => {
