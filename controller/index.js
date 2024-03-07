@@ -1,4 +1,7 @@
 const axios = require('axios');
+const Twilio = require('twilio');
+
+const twilioClient = new Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 const formResponsesController = {
   async getResponses(req,res){
@@ -14,6 +17,17 @@ const formResponsesController = {
     });
     console.log("Endpoint hit")
 
+   
+       try {
+        await twilioClient.messages.create({
+        body: `Somebody tinkering with the app 🥳`,
+        from: process.env.TWILIO_NUMBER,
+        to: process.env.MY_PHONE_NUMBER,
+      });
+      } catch (twilioError) {
+        console.error('Twilio error:', twilioError.message);
+      }
+
     let filteredResponses = response.data.responses.filter(response => {
       return parsedFilters.every(filter => {
         const question = response.questions.find(q => q.id === filter.id);
@@ -24,7 +38,7 @@ const formResponsesController = {
             return question.value === filter.value;
           case 'does_not_equal':
             return question.value !== filter.value;
-         case 'greater_than':
+          case 'greater_than':
         
         if (typeof filter.value === 'number' || !isNaN(filter.value)) {
           return Number(question.value) > Number(filter.value);
