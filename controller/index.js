@@ -15,7 +15,7 @@ const formResponsesController = {
       headers: { 'Authorization': `Bearer ${process.env.FILLOUT_API_KEY}` },
       params: { page, pageSize } 
     });
-    console.log("Endpoint hit")
+    console.log("Response generated successfully")
 
    
        try {
