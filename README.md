@@ -1,10 +1,15 @@
 # Project for Developer Position with Fillout
+---
 
 ![Fillout Logo](https://www.fillout.com/_next/static/media/logo.c5a9e1d4.png)
 
-**Goal:** Create filterable endpoint based on API data returned from existing `GET /v1/api/forms/{formId}/submissions` endpoint.
+**Goal:** Create filterable endpoint based on API data returned from existing `GET /v1/api/forms/{formId}/submissions` endpoint. (Added Twilio SDK to text message me when the endpoint is hit because I am excited about the prospect of getting in front of someone from Fillout, so I want to be the first to know if someone is reviewing my work....and I do weird stuff when I get excited 😂)
+
+---
 
 **Hosting:** Project is hosted on Render
+
+---
 
 **Technologies Used:**
 
@@ -33,6 +38,14 @@ Express
 <img src="https://expressjs.com/images/express-facebook-share.png" width="100">
 
 
+
+Twilio
+
+<img src="https://pages.twilio.com/rs/294-TKB-300/images/twilio-logo-red_2.png" width="100">
+
+
+
+---
 
 
 
